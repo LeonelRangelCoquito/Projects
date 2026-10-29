@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#174c3e">
+    <meta name="description" content="Cadastre-se para participar do sorteio da Cabeça Rações.">
+    <title>Sorteio | Cabeça Rações</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Cabeça Rações, início">
+        <span class="brand-mark" aria-hidden="true">CR</span>
+        <span>CABEÇA <strong>RAÇÕES</strong></span>
+      </a>
+      <span class="topbar-note"><span class="live-dot" aria-hidden="true"></span> Campanha especial</span>
+    </header>
+
+    <main class="campaign">
+      <section class="story" aria-labelledby="campaign-title">
+        <div class="eyebrow"><span class="eyebrow-line"></span> UM MIMO PRA QUEM CUIDA COM AMOR</div>
+        <h1 id="campaign-title">Seu cuidado<br>merece um <span>presente.</span></h1>
+        <p class="story-copy">A Cabeça Rações preparou um brinde especial para agradecer a companhia de quem faz parte da nossa família.</p>
+
+        <div class="event-strip">
+          <div class="date-stamp" aria-label="25 de outubro">
+            <span class="date-day">25</span>
+            <span class="date-month">OUT</span>
+          </div>
+          <div class="event-info">
+            <span class="event-label">DIA DO SORTEIO</span>
+            <strong id="event-date">25/10</strong>
+            <span>Presencial, na loja, com a dona</span>
+          </div>
+          <span class="event-star" aria-hidden="true">✳</span>
+        </div>
+
+        <figure class="pet-photo">
+          <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=1100&q=85" alt="Cachorro recebendo carinho" fetchpriority="high">
+          <figcaption><span class="photo-paw" aria-hidden="true">✳</span> Quem cuida, faz parte.</figcaption>
+        </figure>
+        <p class="story-footnote">O sorteio acontece na loja. Este site é somente para cadastro e confirmação dos requisitos.</p>
+      </section>
+
+      <section class="signup" aria-labelledby="signup-title">
+        <div class="form-heading">
+          <span class="step-label">SUA PARTICIPAÇÃO</span>
+          <h2 id="signup-title">Entre no sorteio</h2>
+          <p>Preencha seus dados e confirme os requisitos.</p>
+        </div>
+
+        <form id="registration-form" novalidate>
+          <label class="field-label" for="name">Seu nome</label>
+          <input id="name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Como podemos te chamar?" required>
+
+          <label class="field-label phone-label" for="phone">Telefone com DDD</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="(00) 00000-0000" required>
+
+          <div class="requirements-heading">
+            <span class="field-label">Para participar</span>
+            <span class="required-note">2 confirmações</span>
+          </div>
+          <label class="requirement" for="follows-instagram">
+            <input id="follows-instagram" name="followsInstagram" type="checkbox" required>
+            <span class="checkmark" aria-hidden="true"></span>
+            <span class="requirement-copy">Sigo a Cabeça Rações no Instagram <a id="instagram-link" href="#" target="_blank" rel="noopener noreferrer">Abrir Instagram ↗</a></span>
+          </label>
+          <label class="requirement" for="reviewed-google">
+            <input id="reviewed-google" name="reviewedGoogle" type="checkbox" required>
+            <span class="checkmark" aria-hidden="true"></span>
+            <span class="requirement-copy">Avaliei a loja no Google <a id="google-link" href="#" target="_blank" rel="noopener noreferrer">Avaliar no Google ↗</a></span>
+          </label>
+
+          <p class="declaration">As confirmações são declaradas por você e poderão ser conferidas pela loja.</p>
+          <button class="submit-button" type="submit">
+            <span>Quero participar</span>
+            <span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+          <p class="privacy-note">Usaremos seu nome e telefone somente para organizar esta participação e entrar em contato com a pessoa sorteada.</p>
+          <div id="form-message" class="form-message" role="status" aria-live="polite" hidden></div>
+        </form>
+
+        <div id="success-panel" class="success-panel" role="status" aria-live="polite" hidden>
+          <span class="success-icon" aria-hidden="true">✓</span>
+          <span class="step-label">CADASTRO CONFIRMADO</span>
+          <h3>Você está participando!</h3>
+          <p>Guarde seu número de participação. O sorteio será presencial na loja.</p>
+          <div class="participant-id">
+            <span>SEU ID ÚNICO</span>
+            <strong id="participant-id"></strong>
+          </div>
+          <button id="copy-id" class="copy-button" type="button">Copiar ID</button>
+        </div>
+
+        <div class="form-bottom"><span>FEITO COM CUIDADO</span><span>✳</span><span>PARA QUEM AMA PET</span></div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <span>© Cabeça Rações</span>
+      <span>Boa sorte pra você e seu melhor amigo.</span>
+    </footer>
+  </body>
+</html>
