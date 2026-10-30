@@ -6,11 +6,6 @@ const phoneInput = document.querySelector('#phone');
 
 function setCampaignLink(element, url, label) {
   if (!url) {
-    element.removeAttribute('href');
-    element.setAttribute('aria-disabled', 'true');
-    element.setAttribute('tabindex', '-1');
-    element.classList.add('is-disabled');
-    element.textContent = `${label} (em breve)`;
     return;
   }
 
